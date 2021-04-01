@@ -1,0 +1,12 @@
+﻿@model CMS.Entities.LDZUser
+
+@{
+    ViewBag.Title = "LDZHome";
+}
+
+<h2>LDZHome</h2>
+
+<div>
+    <input type="submit" value="Create Case" class="btn btn-default" onclick="location.href='@Url.Action("ODZHome","ODZ")'" />
+    <input type="submit" value="View Case History" class="btn btn-default" onclick="location.href='@Url.Action("LDZCases","LDZ")'"/>
+</div>

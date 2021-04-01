@@ -1,0 +1,5 @@
+E:\CaseManagementSystem\CMS\CMS.Exceptions\bin\Debug\CMS.Exceptions.dll
+E:\CaseManagementSystem\CMS\CMS.Exceptions\bin\Debug\CMS.Exceptions.pdb
+E:\CaseManagementSystem\CMS\CMS.Exceptions\obj\Debug\CMS.Exceptions.csproj.CoreCompileInputs.cache
+E:\CaseManagementSystem\CMS\CMS.Exceptions\obj\Debug\CMS.Exceptions.dll
+E:\CaseManagementSystem\CMS\CMS.Exceptions\obj\Debug\CMS.Exceptions.pdb

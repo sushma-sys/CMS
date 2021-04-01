@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Case">
+    <Key>
+      <PropertyRef Name="CaseId" />
+    </Key>
+    <Property Name="CaseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IncidentDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ODZUser" Relationship="Self.FK__Cases__EmailId__36B12243" FromRole="Cases" ToRole="ODZUsers" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__Cases__ServiceId__37A5467C" FromRole="Cases" ToRole="Service" />
+    <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__CaseId__4CA06362" FromRole="Case" ToRole="LDZCas" />
+  </EntityType>
+  <EntityType Name="ODZUser">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cases" Relationship="Self.FK__Cases__EmailId__36B12243" FromRole="ODZUsers" ToRole="Cases" />
+    <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="ODZUser" ToRole="LDZCas" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Service1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cases" Relationship="Self.FK__Cases__ServiceId__37A5467C" FromRole="Service" ToRole="Cases" />
+    <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__Servic__4E88ABD4" FromRole="Service" ToRole="LDZCas" />
+    <NavigationProperty Name="Providers" Relationship="CMSDBModel.FK__Providers__Servi__49C3F6B7" FromRole="Service" ToRole="Provider" />
+  </EntityType>
+  <Association Name="FK__Cases__EmailId__36B12243">
+    <End Role="ODZUsers" Type="Self.ODZUser" Multiplicity="0..1" />
+    <End Role="Cases" Type="Self.Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODZUsers">
+        <PropertyRef Name="EmailId" />
+      </Principal>
+      <Dependent Role="Cases">
+        <PropertyRef Name="EmailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cases__ServiceId__37A5467C">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Cases" Type="Self.Case" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Cases">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CMSDBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cases" EntityType="Self.Case" />
+    <EntitySet Name="ODZUsers" EntityType="Self.ODZUser" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <AssociationSet Name="FK__Cases__EmailId__36B12243" Association="Self.FK__Cases__EmailId__36B12243">
+      <End Role="ODZUsers" EntitySet="ODZUsers" />
+      <End Role="Cases" EntitySet="Cases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cases__ServiceId__37A5467C" Association="Self.FK__Cases__ServiceId__37A5467C">
+      <End Role="Service" EntitySet="Services" />
+      <End Role="Cases" EntitySet="Cases" />
+    </AssociationSet>
+    <EntitySet Name="LDZUsers" EntityType="CMSDBModel.LDZUser" />
+    <EntitySet Name="LDZCases" EntityType="CMSDBModel.LDZCas" />
+    <EntitySet Name="Providers" EntityType="CMSDBModel.Provider" />
+    <AssociationSet Name="FK__LDZCases__CaseId__4CA06362" Association="CMSDBModel.FK__LDZCases__CaseId__4CA06362">
+      <End Role="Case" EntitySet="Cases" />
+      <End Role="LDZCas" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LDZCases__EmailI__4D94879B" Association="CMSDBModel.FK__LDZCases__EmailI__4D94879B">
+      <End Role="ODZUser" EntitySet="ODZUsers" />
+      <End Role="LDZCas" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LDZCases__Servic__4E88ABD4" Association="CMSDBModel.FK__LDZCases__Servic__4E88ABD4">
+      <End Role="Service" EntitySet="Services" />
+      <End Role="LDZCas" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Providers__Servi__49C3F6B7" Association="CMSDBModel.FK__Providers__Servi__49C3F6B7">
+      <End Role="Service" EntitySet="Services" />
+      <End Role="Provider" EntitySet="Providers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="LDZUser">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LDZCas">
+    <Key>
+      <PropertyRef Name="LDZCaseId" />
+    </Key>
+    <Property Name="LDZCaseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CaseId" Type="Int32" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentDescription" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Case" Relationship="CMSDBModel.FK__LDZCases__CaseId__4CA06362" FromRole="LDZCas" ToRole="Case" />
+    <NavigationProperty Name="ODZUser" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="LDZCas" ToRole="ODZUser" />
+    <NavigationProperty Name="Service" Relationship="CMSDBModel.FK__LDZCases__Servic__4E88ABD4" FromRole="LDZCas" ToRole="Service" />
+    <Property Name="ProviderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CaseStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Provider">
+    <Key>
+      <PropertyRef Name="ProviderId" />
+    </Key>
+    <Property Name="ProviderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProviderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceId" Type="Int32" />
+    <NavigationProperty Name="Service" Relationship="CMSDBModel.FK__Providers__Servi__49C3F6B7" FromRole="Provider" ToRole="Service" />
+  </EntityType>
+  <Association Name="FK__LDZCases__CaseId__4CA06362">
+    <End Type="CMSDBModel.Case" Role="Case" Multiplicity="0..1" />
+    <End Type="CMSDBModel.LDZCas" Role="LDZCas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Case">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="LDZCas">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LDZCases__EmailI__4D94879B">
+    <End Type="CMSDBModel.ODZUser" Role="ODZUser" Multiplicity="0..1" />
+    <End Type="CMSDBModel.LDZCas" Role="LDZCas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODZUser">
+        <PropertyRef Name="EmailId" />
+      </Principal>
+      <Dependent Role="LDZCas">
+        <PropertyRef Name="EmailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LDZCases__Servic__4E88ABD4">
+    <End Type="CMSDBModel.Service" Role="Service" Multiplicity="0..1" />
+    <End Type="CMSDBModel.LDZCas" Role="LDZCas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="LDZCas">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Providers__Servi__49C3F6B7">
+    <End Type="CMSDBModel.Service" Role="Service" Multiplicity="0..1" />
+    <End Type="CMSDBModel.Provider" Role="Provider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Provider">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

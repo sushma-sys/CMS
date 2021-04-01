@@ -1,0 +1,102 @@
+﻿@model IEnumerable<CMS.Entities.Case>
+
+@{
+    ViewBag.Title = "ODZHome";
+}
+<h2>ODZHome</h2>
+@using (Html.BeginForm("ODZCaseCreat", "ODZ", FormMethod.Get))
+{
+    <div>
+        <input type="submit" value="Create Case" class="btn btn-default" @*onclick="location.herf='@Url.Action("ODZCaseCreat","ODZ")'"*@ />
+    </div>
+}
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncidentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IncidentDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncidentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncidentDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.ActionLink(linkText: "Send ", actionName: "SendToLDZCase", controllerName: "ODZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)
+                        @Html.DisplayFor(modelItem => item.CustomerPhone)
+                    </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.CaseId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.CaseId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.CaseId })
+                </td>*@
+        <td>
+            @*@Html.ActionLink(linkText: "Send to LDZ", "RecievedODZCases", "LDZ")*@
+            @*@Html.ActionLink(linkText: " ", actionName: "RecievedODZCases", controllerName: "LDZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)*@
+            @Html.ActionLink("Edit", "Edit", "ODZ", new { caseId = item.CaseId }, new { @id = "openpopup", @class = "btn btn-warning pull-right btn-sm glyphicon glyphicon-edit", @onclik = "createPop(item.caseId)" })
+            @*<input type="submit" value="Send" class="btn btn-default" onclick="location.href='@Url.Action("SendToLDZCase","ODZ")'" />*@
+            
+        </td>
+        </tr>
+    }
+
+</table>
+@*<div id="openpopup" style="display:none"></div>*@
+<script type="text/javascript">
+    function createPop(caseId) {
+        var x = $("#openpopup");
+        x.load("/ODZ/Edit?caseId=" + caseId, function () {
+            x.dialog({
+                show: {
+                    effect: "blind",
+                    dueration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    dueration: 1000
+                },
+                model: true,
+                width: 500,
+                higth: 600,
+                title: "Edit Case" + caseId,
+                resizable: false
+
+            })
+        });
+    }
+</script>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

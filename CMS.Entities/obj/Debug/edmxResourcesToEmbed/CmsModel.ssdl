@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cases">
+    <Key>
+      <PropertyRef Name="CaseId" />
+    </Key>
+    <Property Name="CaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncidentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IncidentDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ServiceId" Type="int" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LDZCases">
+    <Key>
+      <PropertyRef Name="LDZCaseId" />
+    </Key>
+    <Property Name="LDZCaseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CaseId" Type="int" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncidentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IncidentDescription" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ServiceId" Type="int" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProviderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CaseStatus" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LDZUsers">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ODZUsers">
+    <Key>
+      <PropertyRef Name="EmailId" />
+    </Key>
+    <Property Name="EmailId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Providers">
+    <Key>
+      <PropertyRef Name="ProviderId" />
+    </Key>
+    <Property Name="ProviderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProviderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceId" Type="int" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Service" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Cases__EmailId__36B12243">
+    <End Role="ODZUsers" Type="Self.ODZUsers" Multiplicity="0..1" />
+    <End Role="Cases" Type="Self.Cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODZUsers">
+        <PropertyRef Name="EmailId" />
+      </Principal>
+      <Dependent Role="Cases">
+        <PropertyRef Name="EmailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cases__ServiceId__37A5467C">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Cases" Type="Self.Cases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Cases">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LDZCases__CaseId__4CA06362">
+    <End Role="Cases" Type="Self.Cases" Multiplicity="0..1" />
+    <End Role="LDZCases" Type="Self.LDZCases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cases">
+        <PropertyRef Name="CaseId" />
+      </Principal>
+      <Dependent Role="LDZCases">
+        <PropertyRef Name="CaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LDZCases__EmailI__4D94879B">
+    <End Role="ODZUsers" Type="Self.ODZUsers" Multiplicity="0..1" />
+    <End Role="LDZCases" Type="Self.LDZCases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ODZUsers">
+        <PropertyRef Name="EmailId" />
+      </Principal>
+      <Dependent Role="LDZCases">
+        <PropertyRef Name="EmailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LDZCases__Servic__4E88ABD4">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="LDZCases" Type="Self.LDZCases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="LDZCases">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Providers__Servi__49C3F6B7">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Providers" Type="Self.Providers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Providers">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CMSDBModelStoreContainer">
+    <EntitySet Name="Cases" EntityType="Self.Cases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LDZCases" EntityType="Self.LDZCases" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LDZUsers" EntityType="Self.LDZUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ODZUsers" EntityType="Self.ODZUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Providers" EntityType="Self.Providers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Cases__EmailId__36B12243" Association="Self.FK__Cases__EmailId__36B12243">
+      <End Role="ODZUsers" EntitySet="ODZUsers" />
+      <End Role="Cases" EntitySet="Cases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cases__ServiceId__37A5467C" Association="Self.FK__Cases__ServiceId__37A5467C">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Cases" EntitySet="Cases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LDZCases__CaseId__4CA06362" Association="Self.FK__LDZCases__CaseId__4CA06362">
+      <End Role="Cases" EntitySet="Cases" />
+      <End Role="LDZCases" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LDZCases__EmailI__4D94879B" Association="Self.FK__LDZCases__EmailI__4D94879B">
+      <End Role="ODZUsers" EntitySet="ODZUsers" />
+      <End Role="LDZCases" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LDZCases__Servic__4E88ABD4" Association="Self.FK__LDZCases__Servic__4E88ABD4">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="LDZCases" EntitySet="LDZCases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Providers__Servi__49C3F6B7" Association="Self.FK__Providers__Servi__49C3F6B7">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Providers" EntitySet="Providers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

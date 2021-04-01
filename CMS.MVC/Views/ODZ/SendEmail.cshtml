@@ -1,0 +1,74 @@
+﻿@model CMS.Entities.Case
+
+<div>
+    <h4>Case</h4>
+    <hr />
+    <!--<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncidentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncidentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncidentDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncidentDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerPhone)
+        </dd>
+
+    </dl>
+    @Html.ActionLink(linkText: "Send Mail ", actionName: "SendEmail", controllerName: "ODZ", routeValues: new { caseId = Model.CaseId}, htmlAttributes: null)-->
+    @*<input type="submit" value="Send mail" class="btn btn-default" onclick="location.href = '@Url.Action("SendEmail", "ODZ")'" />*@
+    @using (Html.BeginForm())
+    {
+        <p>EmailId :</p>
+        <p>@Html.TextBoxFor(model => model.EmailId)</p>
+        <p>IncidentType :</p>
+        <p>@Html.TextBoxFor(model => model.IncidentType)</p>
+        <p>IncidentDescription :</p>
+        <p>@Html.TextBoxFor(model => model.IncidentDescription)</p>
+        <p>Location :</p>
+        <p>@Html.TextBoxFor(model => model.Location)</p>
+        <p>CustomerPhone :</p>
+        <p>@Html.TextBoxFor(model => model.CustomerPhone)</p>
+
+        <input type="submit" value="Send mail" class="btn btn-default" onclick="location.href = '@Url.Action("SendEmail", "ODZ")'"/>
+      }
+    </div>
+

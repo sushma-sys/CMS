@@ -1,0 +1,17 @@
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.BL.dll
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.BL.pdb
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.dll
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.dll
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Exceptions.dll
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\EntityFramework.dll
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.pdb
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.dll.config
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.pdb
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.dll.config
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Exceptions.pdb
+E:\CaseManagementSystem\CMS\CMS.BL\bin\Debug\EntityFramework.xml
+E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csprojAssemblyReference.cache
+E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CoreCompileInputs.cache
+E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CopyComplete
+E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.dll
+E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.pdb

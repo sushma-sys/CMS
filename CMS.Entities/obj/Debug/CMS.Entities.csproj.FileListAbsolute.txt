@@ -1,0 +1,11 @@
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.dll.config
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.dll
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.pdb
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.dll
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.xml
+E:\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CoreCompileInputs.cache
+E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CopyComplete
+E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.dll
+E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.pdb

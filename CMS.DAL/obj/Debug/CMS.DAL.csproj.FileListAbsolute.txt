@@ -1,0 +1,17 @@
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.dll.config
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.pdb
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Exceptions.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.pdb
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.dll.config
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Exceptions.pdb
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.xml
+E:\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csprojAssemblyReference.cache
+E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CoreCompileInputs.cache
+E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CopyComplete
+E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.dll
+E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.pdb
