@@ -6,17 +6,17 @@
     <edmx:Diagrams>
       <Diagram DiagramId="c432c882a92440b0a47baac918b3f7e3" Name="Diagram1">
         <EntityTypeShape EntityType="CMSDBModel.Case" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="CMSDBModel.ODZUser" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="CMSDBModel.Service" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
-        <AssociationConnector Association="CMSDBModel.FK__Cases__EmailId__36B12243" ManuallyRouted="false" />
         <AssociationConnector Association="CMSDBModel.FK__Cases__ServiceId__37A5467C" ManuallyRouted="false" />
         <EntityTypeShape EntityType="CMSDBModel.LDZUser" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="CMSDBModel.LDZCas" Width="1.5" PointX="8" PointY="0.75" />
         <EntityTypeShape EntityType="CMSDBModel.Provider" Width="1.5" PointX="8.125" PointY="4.5" />
         <AssociationConnector Association="CMSDBModel.FK__LDZCases__CaseId__4CA06362" />
-        <AssociationConnector Association="CMSDBModel.FK__LDZCases__EmailI__4D94879B" />
         <AssociationConnector Association="CMSDBModel.FK__LDZCases__Servic__4E88ABD4" />
         <AssociationConnector Association="CMSDBModel.FK__Providers__Servi__49C3F6B7" />
+        <EntityTypeShape EntityType="CMSDBModel.ODZUser" Width="1.5" PointX="3.375" PointY="7" />
+        <AssociationConnector Association="CMSDBModel.FK__Cases__EmailId__36B12243" />
+        <AssociationConnector Association="CMSDBModel.FK__LDZCases__EmailI__4D94879B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

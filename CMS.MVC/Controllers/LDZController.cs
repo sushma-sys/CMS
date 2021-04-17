@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace CMS.MVC.Controllers
 {
@@ -33,6 +34,7 @@ namespace CMS.MVC.Controllers
             string apiLink = ConfigurationManager.AppSettings["ApiUrl"];
             using (var client = new HttpClient())
             {
+                FormsAuthentication.SetAuthCookie(lDZUser.EmailId, false);
                 client.BaseAddress = new Uri(apiLink);
                 var postTask = client.PostAsJsonAsync("LDZLogin", lDZUser);
                 postTask.Wait();
@@ -79,7 +81,7 @@ namespace CMS.MVC.Controllers
                 context.LDZCases.AddOrUpdate(lDZCas);
                 context.SaveChanges();
             }
-            return View(lDZCas);
+            return RedirectToAction(nameof(LDZCases));
         }
 
     }

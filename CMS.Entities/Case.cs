@@ -11,8 +11,9 @@ namespace CMS.Entities
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Case
+    using System.ComponentModel.DataAnnotations;
+
+    public class Case
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Case()
@@ -21,16 +22,22 @@ namespace CMS.Entities
         }
     
         public int CaseId { get; set; }
+        [Required(ErrorMessage ="EmailId Required")]
         public string EmailId { get; set; }
+        [Required(ErrorMessage = "IncidentType Required")]
         public string IncidentType { get; set; }
+        [Required(ErrorMessage = "IncidentDescription Required")]
         public string IncidentDescription { get; set; }
+        [Required(ErrorMessage = "ServiceId Required")]
         public Nullable<int> ServiceId { get; set; }
+        [Required(ErrorMessage = "Location Required")]
         public string Location { get; set; }
+        [Required(ErrorMessage = "CustomerPhone Required")]
         public string CustomerPhone { get; set; }
     
-        public virtual ODZUser ODZUser { get; set; }
         public virtual Service Service { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LDZCas> LDZCases { get; set; }
+        public virtual ODZUser ODZUser { get; set; }
     }
 }

@@ -52,6 +52,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -153,13 +156,11 @@
     <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LDZController.cs" />
-    <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\ODZController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CascadeCaseModel.cs" />
-    <Compile Include="Models\CaseViewModel.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Casevalidation.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -211,11 +213,11 @@
     <Content Include="Views\LDZ\LDZLogin.cshtml" />
     <Content Include="Views\LDZ\LDZHome.cshtml" />
     <Content Include="Views\LDZ\RecievedODZCases.cshtml" />
-    <Content Include="Views\Mail\SendEmail.cshtml" />
     <Content Include="Views\ODZ\Edit.cshtml" />
     <Content Include="Views\ODZ\SendEmail.cshtml" />
     <Content Include="Views\LDZ\LDZCases.cshtml" />
     <Content Include="Views\LDZ\Edit.cshtml" />
+    <Content Include="Views\ODZ\ResetPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

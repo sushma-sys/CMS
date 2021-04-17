@@ -14,16 +14,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ODZUsers">
-      <EntityTypeMapping TypeName="CMSDBModel.ODZUser">
-        <MappingFragment StoreEntitySet="ODZUsers">
-          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Services">
       <EntityTypeMapping TypeName="CMSDBModel.Service">
         <MappingFragment StoreEntitySet="Service">
@@ -65,6 +55,17 @@
           <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
           <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
           <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ODZUsers">
+      <EntityTypeMapping TypeName="CMSDBModel.ODZUser">
+        <MappingFragment StoreEntitySet="ODZUsers">
+          <ScalarProperty Name="PasswordUpdatedOn" ColumnName="PasswordUpdatedOn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -4,6 +4,19 @@
     ViewBag.Title = "ODZHome";
 }
 <h2>ODZHome</h2>
+ @if(ViewBag.Message!=null)
+    {
+<div id="Popupdiv" style="border:1px solid white; text-align:center;color:red">
+    <label>@ViewBag.Message</label>
+</div>
+    }
+@*<div class="inline-div">
+    @if (Request.IsAuthenticated)
+    {
+        <h5 style="text-align:center">welcome: @User.Identity.Name</h5>
+    }
+    <h5 style="text-align:right">@Html.ActionLink("Logout", "Logout", "ODZ")</h5>
+</div>*@
 @using (Html.BeginForm("ODZCaseCreat", "ODZ", FormMethod.Get))
 {
     <div>
@@ -53,21 +66,21 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.ActionLink(linkText: "Send ", actionName: "SendToLDZCase", controllerName: "ODZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)
-                        @Html.DisplayFor(modelItem => item.CustomerPhone)
-                    </td>
+                @Html.DisplayFor(modelItem => item.CustomerPhone)
+            </td>
             @*<td>
                     @Html.ActionLink("Edit", "Edit", new { id=item.CaseId }) |
                     @Html.ActionLink("Details", "Details", new { id=item.CaseId }) |
                     @Html.ActionLink("Delete", "Delete", new { id=item.CaseId })
                 </td>*@
-        <td>
-            @*@Html.ActionLink(linkText: "Send to LDZ", "RecievedODZCases", "LDZ")*@
-            @*@Html.ActionLink(linkText: " ", actionName: "RecievedODZCases", controllerName: "LDZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)*@
-            @Html.ActionLink("Edit", "Edit", "ODZ", new { caseId = item.CaseId }, new { @id = "openpopup", @class = "btn btn-warning pull-right btn-sm glyphicon glyphicon-edit", @onclik = "createPop(item.caseId)" })
-            @*<input type="submit" value="Send" class="btn btn-default" onclick="location.href='@Url.Action("SendToLDZCase","ODZ")'" />*@
-            
-        </td>
+            <td>
+                @*@Html.ActionLink(linkText: "Send to LDZ", "RecievedODZCases", "LDZ")*@
+                @*@Html.ActionLink(linkText: " ", actionName: "RecievedODZCases", controllerName: "LDZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)*@
+                @Html.ActionLink("Edit", "Edit", "ODZ", new { caseId = item.CaseId }, new { @id = "openpopup", @class = "btn btn-warning pull-right btn-sm glyphicon glyphicon-edit", @onclik = "createPop(item.caseId)" })
+                @*<input type="submit" value="Send" class="btn btn-default" onclick="location.href='@Url.Action("SendToLDZCase","ODZ")'" />*@
+                @*@Html.ActionLink(linkText: "Send ", actionName: "SendToLDZCase", controllerName: "ODZ", routeValues: new { CaseId = item.CaseId }, htmlAttributes: null)*@
+
+            </td>
         </tr>
     }
 

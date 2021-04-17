@@ -15,3 +15,20 @@ E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CoreCompileInputs.cac
 E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CopyComplete
 E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.dll
 E:\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.BL.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.BL.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Exceptions.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\EntityFramework.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.DAL.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Entities.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\CMS.Exceptions.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\bin\Debug\EntityFramework.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csprojAssemblyReference.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CoreCompileInputs.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.csproj.CopyComplete
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.BL\obj\Debug\CMS.BL.pdb

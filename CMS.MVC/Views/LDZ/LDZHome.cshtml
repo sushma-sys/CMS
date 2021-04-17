@@ -5,8 +5,15 @@
 }
 
 <h2>LDZHome</h2>
+<div class="inline-div">
+    @if (Request.IsAuthenticated)
+    {
+        <h5 style="text-align:center">welcome: @User.Identity.Name</h5>
+    }
+    <h5 style="text-align:right">@Html.ActionLink("Logout", "Logout", "ODZ")</h5>
+</div>
 
 <div>
-    <input type="submit" value="Create Case" class="btn btn-default" onclick="location.href='@Url.Action("ODZHome","ODZ")'" />
-    <input type="submit" value="View Case History" class="btn btn-default" onclick="location.href='@Url.Action("LDZCases","LDZ")'"/>
+    @*<input type="submit" value="Cases" class="btn btn-default" onclick="location.href='@Url.Action("ODZHome","ODZ")'" />*@
+    <input type="submit" value="View Cases" class="btn btn-default" onclick="location.href='@Url.Action("LDZCases","LDZ")'"/>
 </div>

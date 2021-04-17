@@ -9,3 +9,16 @@ E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CoreCompi
 E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CopyComplete
 E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.dll
 E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.pdb
+E:\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csprojAssemblyReference.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\CMS.Entities.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csprojAssemblyReference.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CoreCompileInputs.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.csproj.CopyComplete
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.Entities\obj\Debug\CMS.Entities.pdb

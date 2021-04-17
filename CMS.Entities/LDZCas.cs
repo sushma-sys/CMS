@@ -12,7 +12,7 @@ namespace CMS.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class LDZCas
+    public class LDZCas
     {
         public int LDZCaseId { get; set; }
         public Nullable<int> CaseId { get; set; }
@@ -26,7 +26,7 @@ namespace CMS.Entities
         public string CaseStatus { get; set; }
     
         public virtual Case Case { get; set; }
-        public virtual ODZUser ODZUser { get; set; }
         public virtual Service Service { get; set; }
+        public virtual ODZUser ODZUser { get; set; }
     }
 }

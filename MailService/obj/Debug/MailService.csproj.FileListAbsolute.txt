@@ -1,0 +1,46 @@
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe.config
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.pdb
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.dll
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.dll
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.SqlServer.dll
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.dll
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Exceptions.dll
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.pdb
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.dll.config
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.pdb
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.dll.config
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.xml
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.SqlServer.xml
+E:\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Exceptions.pdb
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csprojAssemblyReference.cache
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.ProjectInstaller.resources
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.Service1.resources
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.GenerateResource.cache
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.CoreCompileInputs.cache
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.CopyComplete
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.exe
+E:\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Exceptions.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Entities.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\ReminderForPassword.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\bin\Debug\CMS.Exceptions.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csprojAssemblyReference.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.ProjectInstaller.resources
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.Service1.resources
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.GenerateResource.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.CoreCompileInputs.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.csproj.CopyComplete
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.exe
+D:\ASP.NET practice\CaseManagementSystem\CMS\MailService\obj\Debug\MailService.pdb

@@ -6,6 +6,9 @@
 
 <h2>Login</h2>
 <script src="~/Scripts/loginUser.js"></script>
+<div>
+    <h5 class="text-danger"> @ViewBag.Error</h5>
+</div>
 <body>
     <div id="Login">
         <div class="row">
@@ -54,3 +57,6 @@
         </div>
     </div>
 </body>
+<div>
+    @Html.ActionLink("Reset Password", "ResetPassword")
+</div>

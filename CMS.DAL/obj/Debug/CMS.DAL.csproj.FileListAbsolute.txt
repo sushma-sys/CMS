@@ -15,3 +15,20 @@ E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CoreCompileInputs.c
 E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CopyComplete
 E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.dll
 E:\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.DAL.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Exceptions.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Entities.dll.config
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\CMS.Exceptions.pdb
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csprojAssemblyReference.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CoreCompileInputs.cache
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.csproj.CopyComplete
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.dll
+D:\ASP.NET practice\CaseManagementSystem\CMS\CMS.DAL\obj\Debug\CMS.DAL.pdb

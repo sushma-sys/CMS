@@ -49,6 +49,7 @@
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PasswordUpdatedOn" Type="date" />
         </EntityType>
         <EntityType Name="Providers">
           <Key>
@@ -185,20 +186,9 @@
           <Property Name="ServiceId" Type="Int32" />
           <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CustomerPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="ODZUser" Relationship="Self.FK__Cases__EmailId__36B12243" FromRole="Cases" ToRole="ODZUsers" />
           <NavigationProperty Name="Service" Relationship="Self.FK__Cases__ServiceId__37A5467C" FromRole="Cases" ToRole="Service" />
           <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__CaseId__4CA06362" FromRole="Case" ToRole="LDZCas" />
-        </EntityType>
-        <EntityType Name="ODZUser">
-          <Key>
-            <PropertyRef Name="EmailId" />
-          </Key>
-          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Cases" Relationship="Self.FK__Cases__EmailId__36B12243" FromRole="ODZUsers" ToRole="Cases" />
-          <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="ODZUser" ToRole="LDZCas" />
+          <NavigationProperty Name="ODZUser" Relationship="CMSDBModel.FK__Cases__EmailId__36B12243" FromRole="Case" ToRole="ODZUser" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
@@ -211,18 +201,6 @@
           <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__Servic__4E88ABD4" FromRole="Service" ToRole="LDZCas" />
           <NavigationProperty Name="Providers" Relationship="CMSDBModel.FK__Providers__Servi__49C3F6B7" FromRole="Service" ToRole="Provider" />
         </EntityType>
-        <Association Name="FK__Cases__EmailId__36B12243">
-          <End Role="ODZUsers" Type="Self.ODZUser" Multiplicity="0..1" />
-          <End Role="Cases" Type="Self.Case" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ODZUsers">
-              <PropertyRef Name="EmailId" />
-            </Principal>
-            <Dependent Role="Cases">
-              <PropertyRef Name="EmailId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Cases__ServiceId__37A5467C">
           <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
           <End Role="Cases" Type="Self.Case" Multiplicity="*" />
@@ -237,12 +215,7 @@
         </Association>
         <EntityContainer Name="CMSDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cases" EntityType="Self.Case" />
-          <EntitySet Name="ODZUsers" EntityType="Self.ODZUser" />
           <EntitySet Name="Services" EntityType="Self.Service" />
-          <AssociationSet Name="FK__Cases__EmailId__36B12243" Association="Self.FK__Cases__EmailId__36B12243">
-            <End Role="ODZUsers" EntitySet="ODZUsers" />
-            <End Role="Cases" EntitySet="Cases" />
-          </AssociationSet>
           <AssociationSet Name="FK__Cases__ServiceId__37A5467C" Association="Self.FK__Cases__ServiceId__37A5467C">
             <End Role="Service" EntitySet="Services" />
             <End Role="Cases" EntitySet="Cases" />
@@ -254,10 +227,6 @@
             <End Role="Case" EntitySet="Cases" />
             <End Role="LDZCas" EntitySet="LDZCases" />
           </AssociationSet>
-          <AssociationSet Name="FK__LDZCases__EmailI__4D94879B" Association="CMSDBModel.FK__LDZCases__EmailI__4D94879B">
-            <End Role="ODZUser" EntitySet="ODZUsers" />
-            <End Role="LDZCas" EntitySet="LDZCases" />
-          </AssociationSet>
           <AssociationSet Name="FK__LDZCases__Servic__4E88ABD4" Association="CMSDBModel.FK__LDZCases__Servic__4E88ABD4">
             <End Role="Service" EntitySet="Services" />
             <End Role="LDZCas" EntitySet="LDZCases" />
@@ -265,6 +234,15 @@
           <AssociationSet Name="FK__Providers__Servi__49C3F6B7" Association="CMSDBModel.FK__Providers__Servi__49C3F6B7">
             <End Role="Service" EntitySet="Services" />
             <End Role="Provider" EntitySet="Providers" />
+          </AssociationSet>
+          <EntitySet Name="ODZUsers" EntityType="CMSDBModel.ODZUser" />
+          <AssociationSet Name="FK__Cases__EmailId__36B12243" Association="CMSDBModel.FK__Cases__EmailId__36B12243">
+            <End Role="ODZUser" EntitySet="ODZUsers" />
+            <End Role="Case" EntitySet="Cases" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LDZCases__EmailI__4D94879B" Association="CMSDBModel.FK__LDZCases__EmailI__4D94879B">
+            <End Role="ODZUser" EntitySet="ODZUsers" />
+            <End Role="LDZCas" EntitySet="LDZCases" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="LDZUser">
@@ -289,10 +267,10 @@
           <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomerPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Case" Relationship="CMSDBModel.FK__LDZCases__CaseId__4CA06362" FromRole="LDZCas" ToRole="Case" />
-          <NavigationProperty Name="ODZUser" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="LDZCas" ToRole="ODZUser" />
           <NavigationProperty Name="Service" Relationship="CMSDBModel.FK__LDZCases__Servic__4E88ABD4" FromRole="LDZCas" ToRole="Service" />
           <Property Name="ProviderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CaseStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ODZUser" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="LDZCas" ToRole="ODZUser" />
         </EntityType>
         <EntityType Name="Provider">
           <Key>
@@ -312,18 +290,6 @@
             </Principal>
             <Dependent Role="LDZCas">
               <PropertyRef Name="CaseId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__LDZCases__EmailI__4D94879B">
-          <End Type="CMSDBModel.ODZUser" Role="ODZUser" Multiplicity="0..1" />
-          <End Type="CMSDBModel.LDZCas" Role="LDZCas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ODZUser">
-              <PropertyRef Name="EmailId" />
-            </Principal>
-            <Dependent Role="LDZCas">
-              <PropertyRef Name="EmailId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -351,6 +317,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ODZUser">
+          <Key>
+            <PropertyRef Name="EmailId" />
+          </Key>
+          <Property Name="EmailId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordUpdatedOn" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Cases" Relationship="CMSDBModel.FK__Cases__EmailId__36B12243" FromRole="ODZUser" ToRole="Case" />
+          <NavigationProperty Name="LDZCases" Relationship="CMSDBModel.FK__LDZCases__EmailI__4D94879B" FromRole="ODZUser" ToRole="LDZCas" />
+        </EntityType>
+        <Association Name="FK__Cases__EmailId__36B12243">
+          <End Type="CMSDBModel.ODZUser" Role="ODZUser" Multiplicity="0..1" />
+          <End Type="CMSDBModel.Case" Role="Case" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ODZUser">
+              <PropertyRef Name="EmailId" />
+            </Principal>
+            <Dependent Role="Case">
+              <PropertyRef Name="EmailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LDZCases__EmailI__4D94879B">
+          <End Type="CMSDBModel.ODZUser" Role="ODZUser" Multiplicity="0..1" />
+          <End Type="CMSDBModel.LDZCas" Role="LDZCas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ODZUser">
+              <PropertyRef Name="EmailId" />
+            </Principal>
+            <Dependent Role="LDZCas">
+              <PropertyRef Name="EmailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -367,16 +369,6 @@
                 <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ODZUsers">
-            <EntityTypeMapping TypeName="CMSDBModel.ODZUser">
-              <MappingFragment StoreEntitySet="ODZUsers">
-                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -421,6 +413,17 @@
                 <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
                 <ScalarProperty Name="ProviderName" ColumnName="ProviderName" />
                 <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ODZUsers">
+            <EntityTypeMapping TypeName="CMSDBModel.ODZUser">
+              <MappingFragment StoreEntitySet="ODZUsers">
+                <ScalarProperty Name="PasswordUpdatedOn" ColumnName="PasswordUpdatedOn" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

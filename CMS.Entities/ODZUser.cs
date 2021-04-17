@@ -11,7 +11,8 @@ namespace CMS.Entities
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ODZUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,11 +21,15 @@ namespace CMS.Entities
             this.Cases = new HashSet<Case>();
             this.LDZCases = new HashSet<LDZCas>();
         }
-    
+
+        [Required(ErrorMessage = "EmailId is Required")]
         public string EmailId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [Required(ErrorMessage ="Password is Required")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+        public Nullable<System.DateTime> PasswordUpdatedOn { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Case> Cases { get; set; }

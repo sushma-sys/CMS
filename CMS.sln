@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Entities", "CMS.Entitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS.Exceptions", "CMS.Exceptions\CMS.Exceptions.csproj", "{96B56ED0-47A6-42FF-AD81-30BE279871B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailService", "MailService\MailService.csproj", "{4D680CCB-E7AB-4FC4-81BE-5C28C195800F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReminderForPassword", "ReminderForPassword\ReminderForPassword.csproj", "{8EE016CD-CC21-4236-9AA1-A4DC35B776D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{96B56ED0-47A6-42FF-AD81-30BE279871B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B56ED0-47A6-42FF-AD81-30BE279871B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B56ED0-47A6-42FF-AD81-30BE279871B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D680CCB-E7AB-4FC4-81BE-5C28C195800F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D680CCB-E7AB-4FC4-81BE-5C28C195800F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D680CCB-E7AB-4FC4-81BE-5C28C195800F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D680CCB-E7AB-4FC4-81BE-5C28C195800F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE016CD-CC21-4236-9AA1-A4DC35B776D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE016CD-CC21-4236-9AA1-A4DC35B776D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE016CD-CC21-4236-9AA1-A4DC35B776D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE016CD-CC21-4236-9AA1-A4DC35B776D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

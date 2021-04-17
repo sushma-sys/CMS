@@ -1,0 +1,38 @@
+﻿Installing assembly 'E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe'.
+Affected parameters are:
+   i = 
+   logfile = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.InstallLog
+   assemblypath = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+   logtoconsole = 
+Installing service MailService...
+Service MailService has been successfully installed.
+Creating EventLog source MailService in log Application...
+Committing assembly 'E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe'.
+Affected parameters are:
+   i = 
+   logfile = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.InstallLog
+   assemblypath = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+   logtoconsole = 
+Uninstalling assembly 'E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.InstallLog
+   assemblypath = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+Removing EventLog source MailService.
+Service MailService is being removed from the system...
+Service MailService was successfully removed from the system.
+Installing assembly 'E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe'.
+Affected parameters are:
+   i = 
+   logfile = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.InstallLog
+   assemblypath = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+   logtoconsole = 
+Installing service MailService...
+Service MailService has been successfully installed.
+Creating EventLog source MailService in log Application...
+Committing assembly 'E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe'.
+Affected parameters are:
+   i = 
+   logfile = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.InstallLog
+   assemblypath = E:\CaseManagementSystem\CMS\MailService\bin\Debug\MailService.exe
+   logtoconsole = 

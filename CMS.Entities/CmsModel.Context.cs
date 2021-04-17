@@ -26,10 +26,10 @@ namespace CMS.Entities
         }
     
         public virtual DbSet<Case> Cases { get; set; }
-        public virtual DbSet<ODZUser> ODZUsers { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<LDZUser> LDZUsers { get; set; }
         public virtual DbSet<LDZCas> LDZCases { get; set; }
         public virtual DbSet<Provider> Providers { get; set; }
+        public virtual DbSet<ODZUser> ODZUsers { get; set; }
     }
 }
